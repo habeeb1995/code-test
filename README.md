@@ -6,7 +6,7 @@
 
 `npm install`
 
-#### Starting Project
+#### Starting server
 
 `npm start`
 
@@ -14,7 +14,9 @@
 
 ## Swagger documentation
 
-swagger documentation is located at `localhost:3000/documentaion`
+- `hapi-swagger` self documents all the APIs.
+
+- swagger documentation is located at `localhost:3000/documentaion`
 
 ## Unit testing
 
