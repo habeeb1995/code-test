@@ -1,4 +1,4 @@
-const Response = require('../Response/Response');
+const Response = require('../response/Response');
 
 class Element {
     constructor(obj) {
