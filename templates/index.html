@@ -1,0 +1,71 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Github repos</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-bootpag/1.0.4/jquery.bootpag.min.js" ></script>
+</head>
+<body>
+
+<div class="container">
+    <h3>List of repos</h3>
+    <p>Showing {{data.total_count}} repository results for nodejs</p>
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th colspan="2">name</th>
+            <th>description</th>
+        </tr>
+        </thead>
+        <tbody>
+        {{#each data.items}}
+        <tr>
+            <td class="text-center">
+                <img src="{{this.owner.avatar_url}}" width="30" alt="">
+            </td>
+            <td>{{ this.full_name }}</td>
+            <td>{{ this.description }}</td>
+        </tr>
+        {{/each}}
+
+        </tbody>
+    </table>
+    <nav aria-label="Page navigation example text-right">
+        <ul class="pagination float-right">
+            <li class="page-item {{#equals active_page 1}}disabled{{/equals}}">
+                <a  class="page-link " href="?page={{diff active_page 1}}" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                    <span class="sr-only">Previous</span>
+                </a>
+            </li>
+            {{#each page_list}}
+                {{#if this}}
+                    <li class="page-item {{#equals ../active_page this}}active{{/equals}}"><a class="page-link" href="?page={{this}}">{{this}}</a></li>
+                {{else}}
+                    <li class="page-item"><a class="page-link" href="#">...</a></li>
+                {{/if}}
+            {{/each}}
+            <li class="page-item {{#equals active_page 100}}disabled{{/equals}}">
+                <a class="page-link" href="?page={{sum active_page 1}}" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</div>
+</body>
+</html>
