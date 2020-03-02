@@ -2,9 +2,15 @@
 
 ## Getting started
 
+#### Installing dependancies
+
 `npm install`
 
+#### Starting Project
+
 `npm start`
+
+
 
 ## Swagger documentation
 
