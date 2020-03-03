@@ -1,3 +1,1 @@
-module.exports = (a, b) => {
-    return parseFloat(a) - parseFloat(b);
-};
+module.exports = (a, b) => parseFloat(a) - parseFloat(b);
