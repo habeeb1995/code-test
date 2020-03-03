@@ -1,6 +1,6 @@
 const Element = require('./controller/Element');
 const Repos = require('./controller/Repos');
-
+// API routes with swagger documentation
 const routes = [
   {
     method: 'GET',
@@ -17,7 +17,7 @@ const routes = [
     options: {
       handler: Element.organizingChildren,
       description: 'Organising Children Tree',
-      tags: ['api'], // ADD THIS TAG
+      tags: ['api'],
       plugins: {
         'hapi-swagger': {
           validate: {
