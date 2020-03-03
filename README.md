@@ -21,3 +21,7 @@
 ## Unit testing
 
 `npm run test`
+
+## Run linters
+
+`npm run lint`
