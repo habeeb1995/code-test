@@ -45,12 +45,12 @@ class Element {
   }
 
   // init function
-  organizingChildren(req, h) {
+  organizingChildren(req, reply) {
     try {
       this.validate(req.payload);
     } catch (e) {
       const res = Response.validationError(e.message);
-      return h.response(res)
+      return reply.response(res)
         .code(422);
     }
     this.start(req.payload);
