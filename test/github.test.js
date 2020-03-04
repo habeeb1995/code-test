@@ -1,3 +1,5 @@
+/* eslint no-use-before-define: 0 */
+
 const githubRepoHandler = require('../controller/Repos');
 const Helper = require('../helpers/Helper');
 

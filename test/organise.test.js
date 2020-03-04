@@ -1,3 +1,5 @@
+/* eslint no-use-before-define: 0 */
+
 const organizeChildrenHandler = require('../controller/Element');
 
 const sampleInput = {
