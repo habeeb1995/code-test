@@ -2,21 +2,21 @@
 
 ## Getting started
 
+#### Base URL
+`link: 0.0.0.0:3000`
+
 #### Installing dependancies
 
-`npm install`
+`sudo docker build -t pomelo-test .`
 
 #### Starting server
-
-`npm start`
-
-
+`sudo docker run -it --name pomelo-container -p 3000:3000 pomelo-test `
 
 ## Swagger documentation
 
 - `hapi-swagger` self documents all the APIs.
 
-- swagger documentation is located at `localhost:3000/documentaion`
+- swagger documentation is located at `0.0.0.0:3000/documentaion`
 
 ## Unit testing
 
