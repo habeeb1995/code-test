@@ -5,12 +5,11 @@
 #### Base URL
 `link: 0.0.0.0:3000`
 
-#### Installing dependancies
+#### Starting Docker Daemon in development
+`sudo npm run docker-dev `
 
-`sudo docker build -t pomelo-test .`
-
-#### Starting server
-`sudo docker run -it --name pomelo-container -p 3000:3000 pomelo-test `
+#### Starting Docker Daemon in Production
+`sudo npm run docker-prod`
 
 ## Swagger documentation
 
