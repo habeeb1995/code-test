@@ -24,7 +24,7 @@ class Element {
         }
         const isArray = Array.isArray(data[level]);
         if (!isArray) {
-          throw new Error('datas must be arrays');
+          throw new Error('data must be array');
         }
         data[level].forEach((item) => {
           if (!(item instanceof Object)) {
