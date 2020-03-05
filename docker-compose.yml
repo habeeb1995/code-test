@@ -1,12 +1,15 @@
-version: "3.4"
+version: '3.7'
+
 services:
-  api:
+  pomelo-code-test:
+    env_file:
+      - .env
     build:
+      dockerfile: Dockerfile
       context: .
-      target: dev
-    command: ["npm", "run", "dev"]
-    container_name: pomelo-test-api
-    ports:
-      - 3000:3000
     volumes:
-      - /opt/app/node_modules/
+      - /opt/app/node_modules
+    environment:
+      - PORT=${PORT}
+    ports:
+      - ${PORT}:${PORT}

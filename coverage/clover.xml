@@ -4,7 +4,7 @@
     <metrics statements="73" coveredstatements="53" conditionals="38" coveredconditionals="24" methods="17" coveredmethods="14" elements="128" coveredelements="91" complexity="0" loc="73" ncloc="73" packages="3" files="4" classes="4"/>
     <package name="controller">
       <metrics statements="57" coveredstatements="43" conditionals="30" coveredconditionals="21" methods="12" coveredmethods="11"/>
-      <file name="Element.js" path="/home/shah/PlayGround/code-test/controller/Element.js">
+      <file name="ElementController.js" path="/home/shah/PlayGround/code-test/controller/ElementController.js">
         <metrics statements="45" coveredstatements="38" conditionals="28" coveredconditionals="21" methods="11" coveredmethods="11"/>
         <line num="1" count="1" type="stmt"/>
         <line num="5" count="4" type="cond" truecount="2" falsecount="0"/>
@@ -52,7 +52,7 @@
         <line num="86" count="1" type="stmt"/>
         <line num="89" count="1" type="stmt"/>
       </file>
-      <file name="Repos.js" path="/home/shah/PlayGround/code-test/controller/Repos.js">
+      <file name="Repos.controller.js" path="/home/shah/PlayGround/code-test/controller/Repos.controller.js">
         <metrics statements="12" coveredstatements="5" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>

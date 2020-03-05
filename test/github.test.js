@@ -1,7 +1,7 @@
 /* eslint-disable */
 
-const githubRepoHandler = require('../controller/Repos');
-const Helper = require('../helpers/Helper');
+const githubRepoHandler = require('../controller/listGithubRepos/Repos.controller');
+const Helper = require('../controller/utils/Helper');
 
 const sampleResponseFromGithub = {
   total_count: 301165,
@@ -97,7 +97,7 @@ describe('Fetch Github', () => {
         return { data: res.data, page_list: pageList, active_page: activePage };
       }
     );
-    const successResponse = await githubRepoHandler.getRepos({ query: {} });
+    const successResponse = await githubRepoHandler.listRepos({ query: {} });
     expect(successResponse).toMatchObject({
       data: sampleResponseFromGithub,
       page_list: [

@@ -3,8 +3,8 @@ const handlebars = require('handlebars');
 const Inert = require('@hapi/inert');
 const HapiSwagger = require('hapi-swagger');
 const Hapi = require('@hapi/hapi');
-const Pack = require('./package');
-const routes = require('./routes');
+const Pack = require('../package');
+const routes = require('../routes/common.router');
 require('dotenv').config();
 
 const startServer = async () => {
@@ -36,8 +36,8 @@ const startServer = async () => {
       html: handlebars
     },
     relativeTo: __dirname,
-    path: 'templates',
-    helpersPath: 'templates/helpers'
+    path: '../templates',
+    helpersPath: '../templates/helpers'
   });
 
   server.route(routes);

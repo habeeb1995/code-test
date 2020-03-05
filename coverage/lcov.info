@@ -1,5 +1,5 @@
 TN:
-SF:controller/Element.js
+SF:controller/Element.controller.js
 FN:4,(anonymous_0)
 FN:15,(anonymous_1)
 FN:19,(anonymous_2)
@@ -103,7 +103,7 @@ BRF:28
 BRH:21
 end_of_record
 TN:
-SF:controller/Repos.js
+SF:controller/ReposController.js
 FN:10,(anonymous_0)
 FNF:1
 FNH:0

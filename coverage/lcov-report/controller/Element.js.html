@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for controller/Element.js</title>
+    <title>Code coverage report for controller/Element.controller.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../prettify.css" />
     <link rel="stylesheet" href="../base.css" />
@@ -15,41 +15,41 @@
         }
     </style>
 </head>
-    
+
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../index.html">All files</a> / <a href="index.html">controller</a> Element.js</h1>
+        <h1><a href="../index.html">All files</a> / <a href="index.html">controller</a> ElementController.js</h1>
         <div class='clearfix'>
-            
+
             <div class='fl pad1y space-right2'>
                 <span class="strong">84.78% </span>
                 <span class="quiet">Statements</span>
                 <span class='fraction'>39/46</span>
             </div>
-        
-            
+
+
             <div class='fl pad1y space-right2'>
                 <span class="strong">75% </span>
                 <span class="quiet">Branches</span>
                 <span class='fraction'>21/28</span>
             </div>
-        
-            
+
+
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
                 <span class='fraction'>11/11</span>
             </div>
-        
-            
+
+
             <div class='fl pad1y space-right2'>
                 <span class="strong">84.44% </span>
                 <span class="quiet">Lines</span>
                 <span class='fraction'>38/45</span>
             </div>
-        
-            
+
+
         </div>
         <p class="quiet">
             Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
@@ -237,7 +237,7 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">const Response = require('../response/Response');
 &nbsp;
-class Element {
+class ElementController {
   constructor(obj) {
     this.id = obj ? obj.id : null;
     this.title = obj ? obj.title : null;
@@ -308,13 +308,13 @@ class Element {
 &nbsp;
   start(data) {
     // initializing element with null data
-    const head = new Element();
+    const head = new ElementController();
     // iterating to get single objects
     Object.keys(data).forEach((level) =&gt; {
       // checking data are array
       <span class="missing-if-branch" title="else path not taken" >E</span>if (Object.prototype.hasOwnProperty.call(data, level)) {
         data[level].forEach((value) =&gt; {
-          const element = new Element(value);
+          const element = new ElementController(value);
           // passing single objects to find is it child
           head.insert(element);
         });
@@ -323,7 +323,7 @@ class Element {
     this.result = head.children;
   }
 }
-module.exports = new Element();
+module.exports = new ElementController();
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
@@ -344,4 +344,3 @@ module.exports = new Element();
         <script src="../block-navigation.js"></script>
     </body>
 </html>
-    
