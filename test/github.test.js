@@ -1,12 +1,13 @@
 /* eslint-disable */
-
+const axios = require('axios');
 const githubRepoHandler = require('../controller/listGithubRepos/Repos.controller');
 const Helper = require('../controller/utils/Helper');
+jest.mock('axios');
 
 const sampleResponseFromGithub = {
   total_count: 301165,
   incomplete_results: false,
-  items: [
+  data: [
     {
       id: 211666,
       node_id: 'MDEwOlJlcG9zaXRvcnkyMTE2NjY=',
@@ -88,31 +89,44 @@ const sampleResponseFromGithub = {
 
 describe('Fetch Github', () => {
   it('Should return list of repos', async () => {
-    jest.spyOn(githubRepoHandler, 'getRepos').mockImplementation(
-      async (req) => {
-        const activePage = req.query.page ? req.query.page : 1;
-        const res = { data: { ...sampleResponseFromGithub } };
-        // Helper class to count for pagination
-        const pageList = Helper.getPageList(100, activePage, 10);
-        return { data: res.data, page_list: pageList, active_page: activePage };
+    axios.get.mockImplementationOnce(() => (sampleResponseFromGithub));
+
+    const successResponse = await githubRepoHandler.listRepos({ query: { page: 1 } }, {
+      view: (index, response) => {
+        return response;
       }
-    );
-    const successResponse = await githubRepoHandler.listRepos({ query: {} });
-    expect(successResponse).toMatchObject({
-      data: sampleResponseFromGithub,
-      page_list: [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        0,
-        99,
-        100
-      ],
-      active_page: 1
     });
+    expect(successResponse)
+      .toMatchObject({
+        data: sampleResponseFromGithub.data,
+        page_list: [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          0,
+          99,
+          100
+        ],
+        active_page: 1
+      });
   });
+
+  it('Should throw error', async () => {
+    axios.get.mockImplementationOnce(() => Promise.reject(new Error()));
+
+    const errorResponse = await githubRepoHandler.listRepos({ query: { page: 8 } }, {
+      response: (res) => {
+        return {
+          code: (response) => (res)
+        };
+      }
+    });
+    expect(errorResponse.error)
+      .toBe("api error");
+  });
+
 });

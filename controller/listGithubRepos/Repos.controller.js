@@ -10,10 +10,11 @@ class GithubRepoController {
   async listRepos(req, reply) {
     try {
       const activePage = req.query.page ? req.query.page : 1;
-      const res = await axios.get(`${process.env.API_BASE_URL}/search/repositories?q=nodejs&page=${
-        activePage}&per_page=${perPage}`);
       // Helper class to count for pagination
       const pageList = Helper.getPageList(100, activePage, 10);
+      // Fetching github repo using axios
+      const res = await axios.get(`${process.env.API_BASE_URL}/search/repositories?q=nodejs&page=${
+        activePage}&per_page=${perPage}`);
       return reply.view('index', { data: res.data, page_list: pageList, active_page: activePage });
     } catch (e) {
       const res = Response.apiError('not found');
