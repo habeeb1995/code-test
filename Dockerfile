@@ -1,20 +1,15 @@
-FROM node:12-alpine
+FROM node:12-alpine as base
+WORKDIR .
 
-RUN mkdir -p /home/node/app/node_modules && chown -R node:node /home/node/app
+COPY --chown=node:node . ./
 
-WORKDIR /home/node/app
+FROM base as production
+ENV NODE_ENV=production
+RUN npm install --production
+CMD ["node", "./index.js"]
 
-ARG ENV
-
-COPY package*.json ./
-
-USER node
-
+FROM base as dev
+ENV NODE_ENV=development
+RUN npm config set unsafe-perm true && npm install -g nodemon
 RUN npm install
-
-COPY --chown=node:node . .
-
-EXPOSE 3000
-
-COPY install.sh install.sh
-RUN  ./install.sh
+CMD ["nodemon", "./index.js"]

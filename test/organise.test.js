@@ -1,5 +1,5 @@
 /* eslint-disable */
-const organizeChildrenHandler = require('../controller/Element');
+const organizeChildrenHandler = require('../controller/organizeElement/Element.controller');
 
 const sampleInput = {
   0:

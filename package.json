@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --verbose",
+    "test": "jest --verbose --coverage",
     "lint": "./node_modules/.bin/eslint .",
-    "docker-dev": "sudo docker build -t pomelo-test --build-arg 'ENV=dev' . ",
-    "docker-prod": "sudo docker build -t pomelo-test --build-arg 'ENV=prod' . ",
+    "docker-dev": "sudo docker-compose --target=dev -f docker-compose.yml build",
+    "docker-prod": "sudo docker-compose --target=production -f docker-compose.yml build  ",
     "dev": "nodemon index.js",
     "prod": "NODE_ENV=production node index.js "
   },

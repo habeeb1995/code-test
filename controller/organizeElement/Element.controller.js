@@ -1,6 +1,6 @@
-const Response = require('../response/Response');
+const Response = require('../utils/Response');
 
-class Element {
+class ElementController {
   constructor(obj) {
     this.id = obj ? obj.id : null;
     this.title = obj ? obj.title : null;
@@ -71,13 +71,13 @@ class Element {
 
   start(data) {
     // initializing element with null data
-    const head = new Element();
+    const head = new ElementController();
     // iterating to get single objects
     Object.keys(data).forEach((level) => {
       // checking data are array
       if (Object.prototype.hasOwnProperty.call(data, level)) {
         data[level].forEach((value) => {
-          const element = new Element(value);
+          const element = new ElementController(value);
           // passing single objects to find is it child
           head.insert(element);
         });
@@ -86,4 +86,4 @@ class Element {
     this.result = head.children;
   }
 }
-module.exports = new Element();
+module.exports = new ElementController();
