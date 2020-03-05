@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --verbose",
+    "test": "jest --verbose --coverage",
     "lint": "./node_modules/.bin/eslint .",
     "docker-dev": "sudo docker build -t pomelo-test --build-arg 'ENV=dev' . ",
     "docker-prod": "sudo docker build -t pomelo-test --build-arg 'ENV=prod' . ",

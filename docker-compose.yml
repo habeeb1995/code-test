@@ -1,0 +1,12 @@
+version: "3.4"
+services:
+  api:
+    build:
+      context: .
+      target: dev
+    command: ["npm", "run", "dev"]
+    container_name: pomelo-test-api
+    ports:
+      - 3000:3000
+    volumes:
+      - /opt/app/node_modules/

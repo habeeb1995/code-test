@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1583380741059" clover="3.2.0">
+  <project timestamp="1583380741059" name="All files">
+    <metrics statements="73" coveredstatements="53" conditionals="38" coveredconditionals="24" methods="17" coveredmethods="14" elements="128" coveredelements="91" complexity="0" loc="73" ncloc="73" packages="3" files="4" classes="4"/>
+    <package name="controller">
+      <metrics statements="57" coveredstatements="43" conditionals="30" coveredconditionals="21" methods="12" coveredmethods="11"/>
+      <file name="Element.js" path="/home/shah/PlayGround/code-test/controller/Element.js">
+        <metrics statements="45" coveredstatements="38" conditionals="28" coveredconditionals="21" methods="11" coveredmethods="11"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="5" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="6" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="7" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="8" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="9" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="10" count="4" type="stmt"/>
+        <line num="11" count="4" type="stmt"/>
+        <line num="16" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="19" count="2" type="stmt"/>
+        <line num="21" count="3" type="cond" truecount="1" falsecount="1"/>
+        <line num="22" count="3" type="cond" truecount="1" falsecount="1"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="25" count="3" type="stmt"/>
+        <line num="26" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="27" count="1" type="stmt"/>
+        <line num="29" count="2" type="stmt"/>
+        <line num="30" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="33" count="2" type="stmt"/>
+        <line num="34" count="2" type="stmt"/>
+        <line num="35" count="10" type="stmt"/>
+        <line num="36" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="39" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="40" count="0" type="stmt"/>
+        <line num="49" count="1" type="stmt"/>
+        <line num="50" count="1" type="stmt"/>
+        <line num="52" count="0" type="stmt"/>
+        <line num="53" count="0" type="stmt"/>
+        <line num="56" count="1" type="stmt"/>
+        <line num="57" count="1" type="stmt"/>
+        <line num="62" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="63" count="2" type="stmt"/>
+        <line num="66" count="1" type="stmt"/>
+        <line num="67" count="1" type="stmt"/>
+        <line num="74" count="1" type="stmt"/>
+        <line num="76" count="1" type="stmt"/>
+        <line num="78" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="79" count="2" type="stmt"/>
+        <line num="80" count="2" type="stmt"/>
+        <line num="82" count="2" type="stmt"/>
+        <line num="86" count="1" type="stmt"/>
+        <line num="89" count="1" type="stmt"/>
+      </file>
+      <file name="Repos.js" path="/home/shah/PlayGround/code-test/controller/Repos.js">
+        <metrics statements="12" coveredstatements="5" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="12" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="helpers">
+      <metrics statements="13" coveredstatements="9" conditionals="8" coveredconditionals="3" methods="3" coveredmethods="3"/>
+      <file name="Helper.js" path="/home/shah/PlayGround/code-test/helpers/Helper.js">
+        <metrics statements="13" coveredstatements="9" conditionals="8" coveredconditionals="3" methods="3" coveredmethods="3"/>
+        <line num="3" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="6" count="9" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="17" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="24" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="42" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="response">
+      <metrics statements="3" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+      <file name="Response.js" path="/home/shah/PlayGround/code-test/response/Response.js">
+        <metrics statements="3" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="19" count="2" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>
