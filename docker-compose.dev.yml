@@ -7,7 +7,6 @@ services:
     build:
       dockerfile: Dockerfile
       context: .
-      target: dev
     volumes:
       - /opt/app/node_modules
     environment:

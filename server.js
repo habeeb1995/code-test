@@ -10,15 +10,15 @@ require('dotenv').config();
 const startServer = async () => {
   const swaggerOptions = {
     info: {
-      title: 'API documentation',
-      description: 'Here is given the api for organizing the children parent relation in appendix 1 input',
+      title: 'Pomelo Code Test Documentation',
+      description: 'Documentation for the Tests List Github Repos and Organize children in Object.',
       version: Pack.version
     }
   };
-
+  // Setting default Port and Host if no env found
   const server = Hapi.server({
-    port: process.env.PORT || 3000,
-    host: process.env.HOST || '0.0.0.0'
+    port: process.env.PORT,
+    host: process.env.HOST
   });
 
   await server.register([
