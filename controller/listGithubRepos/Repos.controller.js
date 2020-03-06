@@ -5,8 +5,16 @@ const Response = require('../utils/Response');
 const perPage = 10;
 
 class GithubRepoController {
-  // 1, Fetch GithubRepoController using axios by passing current page and total limit
-  // 2, send back response by serving html using default rendering
+  /**
+   * Class with function for returning GitHub Repos.
+   *
+   * Function: listRepos
+   * 1, Fetch list using axios by passing current page and total limit
+   * 2, send back response by serving html using default rendering
+   *
+   * @query {number} page - Current page number
+   * @return {html} - Rendered HTML response.
+   */
   async listRepos(req, reply) {
     try {
       const activePage = req.query.page ? req.query.page : 1;

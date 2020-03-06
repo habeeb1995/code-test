@@ -1,6 +1,29 @@
 const Response = require('../utils/Response');
 
 class ElementController {
+  /**
+   * Class with for organizing Object and Element controller.
+   *
+   * Function: Validate()
+   * Validate the object that passed with various checks.
+   * @param {object} - single level Object
+   * @return {null} - returns error if not validate successfully else return null.
+   *
+   * Function: organizingChildren()
+   * Entry point for the API.
+   * @param {object, object} - HapiJS API params ( reply, response)
+   * @return {object} - Final organizeggd output object.
+   *
+   * Function: insert()
+   * Insert child element into the parent.
+   * @param {object} - Object with multilevel object
+   * @return {object} - Object which mapped under each parent level  object.
+   *
+   * Function: start()
+   * Function to start organizing the object.
+   * @body {object} - Object with multilevel object
+   * @return {object} - Final output object.
+   */
   constructor(obj) {
     this.id = obj ? obj.id : null;
     this.title = obj ? obj.title : null;
